@@ -9,20 +9,26 @@ $(document).ready(function() {
 		
 		init: function() {
 
-			smoothScroll();
+			backpack3r.smoothScroll();
+			console.log('Hello');
 
 		},
 
 		smoothScroll: function() {
 			$('ul a').click(function() {
 				var $anchor = $(this);
+
+				$('html, body').animate({
+					scrollTop: $($anchor.attr('href')).offset().top
+				}, 1000);
+				return false;
 			});
 		}
 
 	};
 
 
-	init();
+	backpack3r.init();
 
 
 });

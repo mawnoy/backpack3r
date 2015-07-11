@@ -49,7 +49,7 @@
         <div class="collapse navbar-collapse " id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
             <li class="active" ><a href="#">Home<span class="sr-only">(current)</span></a></li>
-            <li><a href="#">Trip</a></li>
+            <li><a href="#popular-trip">Popular Trip</a></li>
             <li><a href="#">Blog</a></li>
             <li><a href="#">About</a></li>
             <li><a href="#">Contact</a></li>
@@ -63,12 +63,12 @@
 
 
     <!-- Header -->
-    <header class="jumbotron">
+    <header class="jumbotron text-center">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
             <div class="text-hero">
-              <h3>Share your story</h3>
+              <h3>Share your story</h3> <!-- Should to remove this text. -->
               <h2>Best trip</h2>
               <p>Live a Life you'll remembered</p>
             </div>
@@ -88,33 +88,42 @@
 
 
     <!-- Popular Trip -->
-    <section class="popular-trip">
+    <section class="hilight-sec" id="popular-trip">
+      <div class="header-sec text-center">
+        <h6 class="h6">review</h6>
+        <h2>Popular Trips</h2>
+      </div>
+
       <div class="container-fluid">
         <div class="row">
-          <div class="col-md-6">
-            <figure>
-              <img src="../images/popular-trip.jpg" width="100%">
-              <figcaption>
-                <h3>Krabi</h3>
+          <div class="col-md-10 col-md-offset-1">
+            <figure class="row card">
+              <div class="col-md-8 bd-r">
+                <img src="../images/popular-trip.jpg" width="100%">
+                <div class="img-option">  
+         <!--          <ul class="option">
+                    <li>View</li>
+                    <li>Love</li>
+                    <li>Bookmark</li>
+                  </ul> -->
+                </div>
+              </div>
+              <figcaption>         
+              <div class="col-md-4">
+                <h3 class="sub-header-sec">Krabi Trip</h3>
+                <hr class="soften">
+                <p class="detail">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora ipsum quod hic eveniet molestias beatae veritatis aspernatur ratione dolores magni.</p>
                 <ul>
-                  <li>Like</li>
-                  <li>Comment</li>
-                  <li>Bookmark</li>
+                  <li>Price : 2000$</li>
+                  <li>Location : Thailand, Krabi</li>
+                  <li>Day-Trip : 2 Day</li>
+                  <li>Rating : 4 star</li>
+                  <li>Date : 24/12/58</li>
                 </ul>
+                <button class="btn"><a href="#">Read more ></a></button>
+              </div>
               </figcaption>
             </figure>
-          </div>
-          <div class="col-md-6">
-            <h2>Popular Trip</h2>
-            <p class="detail">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora ipsum quod hic eveniet molestias beatae veritatis aspernatur ratione dolores magni.<a class="btn" href="#">Read more</a>
-            <ul></p>
-              <li>Price : 2000$</li>
-              <li>Location : Thailand, Krabi</li>
-              <li>Day-Trip : 2 Day</li>
-              <li>Rating : 4 star</li>
-              <li>Date : 24/12/58</li>
-            </ul>
-            
           </div>
         </div>
       </div>
