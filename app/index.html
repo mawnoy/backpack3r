@@ -5,7 +5,8 @@
     <title>backpack3r</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,900,300italic' rel='stylesheet'>
+    <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet'>
     <link rel="shortcut icon" href="/favicon.ico">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -22,7 +23,7 @@
     <!-- endbuild -->
     
   </head>
-  <body>
+  <body class="trip-theme">
     <!--[if lt IE 10]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -30,7 +31,7 @@
     
     <!-- Nav -->
     <nav class="navbar navbar-default navbar-fixed-top">
-      <div class="container-fluid">
+      <div class="container">
         
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -41,7 +42,8 @@
             <span class="icon-bar"></span>
           </button>
           <a class="navbar-brand" href="#">Backpack3r</a>
-        </div>
+        </div> <!-- /.navbar-header -->
+
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse " id="bs-example-navbar-collapse-1">
@@ -51,6 +53,7 @@
             <li><a href="#">Blog</a></li>
             <li><a href="#">About</a></li>
             <li><a href="#">Contact</a></li>
+            <li><a class="btn-signup" data-target="#signupModal" data-toggle="modal" href="/login"><span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>Signup</a></li>
           </ul>
         </div>
 
@@ -61,21 +64,90 @@
 
     <!-- Header -->
     <header class="jumbotron">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="text-hero">
+              <h3>Share your story</h3>
+              <h2>Best trip</h2>
+              <p>Live a Life you'll remembered</p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+              <div class="btn-hero">
+                <button class="btn"><span class="glyphicon glyphicon-retweet" aria-hidden="true"></span>Share story</button>
+                <button class="btn"><span class="glyphicon glyphicon-search" aria-hidden="true"></span>Find trip</button>
+              </div>
+          </div>
+        </div>
+      </div>
+    </header> <!-- /.header -->
+
+
+
+    <!-- Popular Trip -->
+    <section class="popular-trip">
       <div class="container-fluid">
         <div class="row">
           <div class="col-md-6">
-            <h2>Best trip for you !!!</h2>
-            <p>Live for your life not for your money.</p>
+            <figure>
+              <img src="../images/popular-trip.jpg" width="100%">
+              <figcaption>
+                <h3>Krabi</h3>
+                <ul>
+                  <li>Like</li>
+                  <li>Comment</li>
+                  <li>Bookmark</li>
+                </ul>
+              </figcaption>
+            </figure>
           </div>
           <div class="col-md-6">
+            <h2>Popular Trip</h2>
+            <p class="detail">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora ipsum quod hic eveniet molestias beatae veritatis aspernatur ratione dolores magni.<a class="btn" href="#">Read more</a>
+            <ul></p>
+              <li>Price : 2000$</li>
+              <li>Location : Thailand, Krabi</li>
+              <li>Day-Trip : 2 Day</li>
+              <li>Rating : 4 star</li>
+              <li>Date : 24/12/58</li>
+            </ul>
             
           </div>
         </div>
       </div>
-    </header>
+    </section> <!-- /.popular-trip -->
 
 
-
+    <!-- SIGNUP Modal -->
+    <div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header text-center">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">SIGN UP</h4>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="inputEmail">Email</label>
+                <input class="form-control" type="text" placeholder="E-mail">
+              </div>
+              <div class="form-group">
+                <label for="inputPassword">Password</label>
+                <input class="form-control" type="password" placeholder="Password">
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+            <button type="button" class="btn btn-brand">Sign up</button>
+          </div>
+        </div>
+      </div>
+    </div> <!-- /.modal -->
 
 
 

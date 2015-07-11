@@ -4,39 +4,173 @@ $icon-font-path: "../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 // endbower
 
+//-----------------------------------------------//
+//
+//  VARIABLES
+//
+//-----------------------------------------------//
+
+$tangerine: #fbada8;
+$sky: #b4d8d8;
+$sunshine: #fac552;
+$sand: #efcd58;
+
+
+$jumbo-bg: $tangerine;
+$modal-header: $sky;
+$text-hero: $sunshine;
+$hero-btn: $sky;
+
+
+
+//-----------------------------------------------//
+//
+//  GENERAL STYLE
+//
+//-----------------------------------------------//
+
+a:focus, a:active {
+  outline: none;
+}
+
+//-----------------------------------------------//
+//
+//  TYPOGRAPHY STYLE
+//
+//-----------------------------------------------//
+
+.trip-theme {
+  h1, h2, h3, h4, h5, h6, p {
+    font-family: 'Lato', sans-serif;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 900;
+  }
+}
+
+//-----------------------------------------------//
+//
+//  NAVBAR STYLE
+//
+//-----------------------------------------------//
+.navbar-fixed-top {
+  box-shadow: 0 2px 2px #888;
+}
+
+.navbar-nav {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+
+// .navbar-glass {
+//   background-color: rgba(#eee, .9);
+//   a{
+//     color: #888;
+//   }
+// }
+//-----------------------------------------------//
+//
+//  TEXT LAYOUT
+//
+//-----------------------------------------------//
+
+
+.text-hero {
+  color: $text-hero;
+  h3 {
+    color: #555;
+  }
+}
+
+
+//-----------------------------------------------//
+//
+//  BUTTON STYLE
+//
+//-----------------------------------------------//
+.navbar-nav {
+  .btn-signup {
+      transition: background .5s ease;
+      background-color: $sky;
+      border-left: 1px solid rgba(#bbb, .4);
+      border-right: 1px solid rgba(#bbb, .4);
+      padding: 10px 25px;
+      margin-top: 5px;
+    }
+    span {
+      margin-right: 5px;
+    }
+}
+
+.nav li a.btn-signup {
+  color: white;
+  &:hover, &:focus {
+    background-color: lighten($sky, 5%);
+    color: darken($sky, 30%);
+  }
+}
+
+.btn-hero {
+  margin-top: .5em;
+}
+
+.btn-brand {
+  background-color: $sky;
+  border-color: darken($sky, 2%);
+  color: white;
+}
+
+//-----------------------------------------------//
+//
+//  SIGNUP MODAL STYLE
+//
+//-----------------------------------------------//
+
+.modal-header {
+  background-color: $modal-header;
+  h4 {
+    font-size: 2.4em;
+    color: white;
+    letter-spacing: .3em;
+  }
+}
+
+
+//-----------------------------------------------//
+//
+//  BACKGROUND STYLE
+//
+//-----------------------------------------------//
+
+.bg-overlay {
+  background-color: rgba(black, .1);
+  display: block;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .browsehappy {
   margin: 0.2em 0;
   background: #ccc;
   color: #000;
   padding: 0.2em 0;
-}
-
-/* Everything but the jumbotron gets side spacing for mobile first views */
-.header,
-.marketing,
-.footer {
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-/* Custom page header */
-.header {
-  border-bottom: 1px solid #e5e5e5;
-
-  /* Make the masthead heading the same height as the navigation */
-  h3 {
-    margin-top: 0;
-    margin-bottom: 0;
-    line-height: 40px;
-    padding-bottom: 19px;
-  }
-}
-
-/* Custom page footer */
-.footer {
-  padding-top: 19px;
-  color: #777;
-  border-top: 1px solid #e5e5e5;
 }
 
 .container-narrow > hr {
@@ -45,44 +179,99 @@ $icon-font-path: "../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
 
 /* Main marketing message and sign up button */
 .jumbotron {
+  padding-top: 0 !important;
+  position: relative;
+  background-color: $jumbo-bg;
+  background-image: url(/images/jumbotron-img.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  background-attachment: fixed;
+  width: 100%;
+  padding-top: 52px;
   height: 100vh;
   text-align: center;
   border-bottom: 1px solid #e5e5e5;
   .btn {
-    font-size: 21px;
-    padding: 14px 24px;
+    width: 35%;
+    margin-top: 10px;
+    font-size: 16px;
+    color: white;
+    padding: 14px 10px;
+    border-radius: 0;
+    background-color: $hero-btn;
+    transition: background .5s ease;
+    letter-spacing: .1em;
+    box-shadow: 0 2px 2px #888;
+    &:hover {
+      background-color: lighten($sunshine, 8%);
+    }
+    &:focus {
+      outline: none;
+    }
+    span {
+      margin-right: 10px;
+    }
+  }
+  h2 {
+    font-size: 5em;
+    margin-top: 0;
+  }
+  h3 {
+    font-weight: 400;
+    font-size: 1.3em;
+    letter-spacing: .2em;
+    margin-top: 2em
+  }
+  p {
+    color: white;
+    font-size: 18px;
+    font-family: 'Pacifico';
+    font-weight: 300;
+    letter-spacing: .1em;
   }
 }
 
-/* Supporting marketing content */
-.marketing {
-  margin: 40px 0;
-  p + h4 {
-    margin-top: 28px;
+
+/* Responsive: Portrait mobiles */
+@media screen and (min-width: 320px) and (orientation : portrait) {
+  .jumbotron {
+    h3 {
+      margin-top: 5em;
+    }
+    .btn {
+      width: 100%;
+    }
   }
 }
+
+
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
-  .container {
-    max-width: 730px;
-  }
 
-  /* Remove the padding we set earlier */
-  .header,
-  .marketing,
-  .footer {
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  /* Space out the masthead */
-  .header {
-    margin-bottom: 30px;
+  .btn-signup {
+    border-radius: 20px;
   }
 
   /* Remove the bottom border on the jumbotron for visual effect */
   .jumbotron {
-    border-bottom: 0;
+    .btn {
+      border-radius: 30px;
+      width: 300px;
+      margin: 1em;
+      font-size: 21px;
+      padding: 14px 24px;
+    }
+    h2 {
+      font-size: 7em;
+    }
+    h3 {
+      margin-top: 6em;
+    }
+    p {
+      font-size: 18px;
+      letter-spacing: .6em;
+    }
   }
 }

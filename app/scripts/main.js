@@ -1,2 +1,28 @@
 // jshint devel:true
-console.log('\'Allo \'Allo!');
+
+$(document).ready(function() {
+
+
+/*------- myPage Scripts -------*/
+	
+	var backpack3r = {
+		
+		init: function() {
+
+			smoothScroll();
+
+		},
+
+		smoothScroll: function() {
+			$('ul a').click(function() {
+				var $anchor = $(this);
+			});
+		}
+
+	};
+
+
+	init();
+
+
+});
